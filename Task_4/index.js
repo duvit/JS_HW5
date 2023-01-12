@@ -1,3 +1,5 @@
+//Создать таймер обратного отсчета, который будет в console выодить время в формате MM:SS. Где MM - количество минут, SS - количество секунд. При этом когда закончится время, нужно вывести в console строку "Timer End".
+
 const timer = (time) => {
   if (time > 60 * 60) {
     console.log("You need enter time less 1 hour");

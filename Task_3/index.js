@@ -1,3 +1,6 @@
+//Содать функцию , которая при каждом вызове будет показывать разницу в секундах между временем когда ее вызывали последний раз и теперешним. 
+//Вызываем первый раз, то ретерним строку 'Enabled'. Запрещается использовать глобальные переменные как хранилище значений. 
+
 function getTime() {
   const message = "Enabled";
   let start = null;
@@ -10,16 +13,15 @@ function getTime() {
       start = +new Date();
       return message;
     } else {
+      start = point;
       return timeDifference;
     }
-
-    start = point;
   };
 }
 
 let getTime1 = getTime();
 
-console.log(getTime1());
-setTimeout(() => console.log(getTime1()), 2000);
-setTimeout(() => console.log(getTime1()), 3000);
-setTimeout(() => console.log(getTime1()), 5000);
+const button = document.querySelector("#button");
+
+button.addEventListener('click', () => console.log(getTime1())  )
+
